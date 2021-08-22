@@ -8,7 +8,7 @@ namespace HolaMundo
         {
             Console.WriteLine("Hola como te llamas??");
             String nombre =  Console.ReadLine();
-            Console.WriteLine("AEA este gil se llama : "+ nombre );
+            Console.WriteLine("Vale se llama : "+ nombre );
         }
     }
 }
