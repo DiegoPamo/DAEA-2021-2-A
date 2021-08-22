@@ -74,7 +74,7 @@ namespace ConsoleApp1
                     }
                 }
                 if (cont <= 2)
-                { //si variable cont es mayor a dos, el numero es divisible en mas de dos numero osea no es primo
+                { 
                     Console.WriteLine(i);
                 }
                 cont = 0;
