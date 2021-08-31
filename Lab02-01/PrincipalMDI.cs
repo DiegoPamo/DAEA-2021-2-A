@@ -28,5 +28,33 @@ namespace Lab02_01
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void mnuManProductos_Click(object sender, EventArgs e)
+        {
+            ManProducto frm = new ManProducto();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuManCategorias_Click(object sender, EventArgs e)
+        {
+            ManCategoria frm = new ManCategoria();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuManProveedores_Click(object sender, EventArgs e)
+        {
+            ManProveedores frm = new ManProveedores();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuManClientes_Click(object sender, EventArgs e)
+        {
+            ManCliente frm = new ManCliente();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

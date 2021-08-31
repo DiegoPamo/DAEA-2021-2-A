@@ -24,9 +24,24 @@ namespace Lab02_01
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            PrincipalMDI principal = new PrincipalMDI();
-            principal.Show();
-            this.Hide();
+            string usuario = txtUsuario.Text;
+            string password = txtPassword.Text;
+
+            if (usuario == "diego02" && password == "123456")
+            {
+                PrincipalMDI principal = new PrincipalMDI();
+                principal.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Las credenciales brindadas son erroneas",
+                                "Error al Iniciar Sesion",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

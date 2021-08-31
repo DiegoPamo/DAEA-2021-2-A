@@ -93,8 +93,17 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManCategoria.resx">
+      <DependentUpon>ManCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManCliente.resx">
+      <DependentUpon>ManCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManProducto.resx">
       <DependentUpon>ManProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManProveedores.resx">
+      <DependentUpon>ManProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManUsuario.resx">
       <DependentUpon>ManUsuario.cs</DependentUpon>
