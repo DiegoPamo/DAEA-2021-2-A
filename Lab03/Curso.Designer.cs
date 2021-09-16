@@ -1,7 +1,7 @@
 ﻿
 namespace Lab03
 {
-    partial class Persona
+    partial class Curso
     {
         /// <summary>
         /// Required designer variable.
@@ -30,63 +30,62 @@ namespace Lab03
         private void InitializeComponent()
         {
             this.btnListar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvListado = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
+            this.txtCurso = new System.Windows.Forms.TextBox();
+            this.dgvCursos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(12, 19);
+            this.btnListar.Location = new System.Drawing.Point(12, 12);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(110, 32);
+            this.btnListar.Size = new System.Drawing.Size(117, 33);
             this.btnListar.TabIndex = 0;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(166, 21);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(224, 26);
-            this.txtNombre.TabIndex = 1;
-            // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(396, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(370, 12);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(107, 32);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Size = new System.Drawing.Size(119, 33);
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dgvListado
+            // txtCurso
             // 
-            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListado.Location = new System.Drawing.Point(12, 72);
-            this.dgvListado.Name = "dgvListado";
-            this.dgvListado.RowHeadersWidth = 51;
-            this.dgvListado.RowTemplate.Height = 24;
-            this.dgvListado.Size = new System.Drawing.Size(491, 474);
-            this.dgvListado.TabIndex = 3;
+            this.txtCurso.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurso.Location = new System.Drawing.Point(135, 15);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(231, 30);
+            this.txtCurso.TabIndex = 2;
             // 
-            // Persona
+            // dgvCursos
+            // 
+            this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCursos.Location = new System.Drawing.Point(17, 60);
+            this.dgvCursos.Name = "dgvCursos";
+            this.dgvCursos.RowHeadersWidth = 51;
+            this.dgvCursos.RowTemplate.Height = 24;
+            this.dgvCursos.Size = new System.Drawing.Size(471, 413);
+            this.dgvCursos.TabIndex = 3;
+            // 
+            // Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 558);
-            this.Controls.Add(this.dgvListado);
+            this.ClientSize = new System.Drawing.Size(501, 487);
+            this.Controls.Add(this.dgvCursos);
+            this.Controls.Add(this.txtCurso);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnListar);
-            this.Name = "Persona";
-            this.Text = "Persona";
-            this.Load += new System.EventHandler(this.Persona_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
+            this.Name = "Curso";
+            this.Text = "Curso";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,8 +94,8 @@ namespace Lab03
         #endregion
 
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvListado;
+        private System.Windows.Forms.TextBox txtCurso;
+        private System.Windows.Forms.DataGridView dgvCursos;
     }
 }
