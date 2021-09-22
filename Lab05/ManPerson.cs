@@ -101,11 +101,123 @@ namespace Lab05
             if (dgvListado.SelectedRows.Count > 0)
             {
                 txtPersonID.Text = dgvListado.SelectedRows[0].Cells[0].Value.ToString();
-                txtFirstName.Text = dgvListado.SelectedRows[1].Cells[1].Value.ToString();
-                txtLastName.Text = dgvListado.SelectedRows[2].Cells[2].Value.ToString();
-                txtHireDate.Text = dgvListado.SelectedRows[3].Cells[3].Value.ToString();
-                txtEnrollmentDate.Text = dgvListado.SelectedRows[4].Cells[4].Value.ToString();
+                txtFirstName.Text = dgvListado.SelectedRows[0].Cells[1].Value.ToString();
+                txtLastName.Text = dgvListado.SelectedRows[0].Cells[2].Value.ToString();
+                txtHireDate.Text = dgvListado.SelectedRows[0].Cells[3].Value.ToString();
+                txtEnrollmentDate.Text = dgvListado.SelectedRows[0].Cells[4].Value.ToString();
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String PersonID = txtPersonID.Text;
+            String FirstName = txtFirstName.Text;
+            String LastName = txtLastName.Text;
+            String HireDate = txtHireDate.Text;
+            String EnrollmentDate = txtEnrollmentDate.Text;
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarCodigoPerson";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@PersonID";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = PersonID;
+
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+
+            con.Close();
+        }
+
+        private void btnContrato_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String HireDate = txtHireDate.Text;
+
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarAñoContratoPerson";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@HireDate";
+            param.SqlDbType = SqlDbType.DateTime;
+            param.Value = HireDate;
+
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+
+            con.Close();
+        }
+
+        private void btnNombre_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String FirstName = txtFirstName.Text;
+
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarPersonaNombre";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@FirstName";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = FirstName;
+
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
+
+        }
+
+        private void btnApellidos_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            String LastName = txtLastName.Text;
+
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BuscarPersonaApellido";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@LastName";
+            param.SqlDbType = SqlDbType.NVarChar;
+            param.Value = LastName;
+
+            cmd.Parameters.Add(param);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+            dgvListado.DataSource = dt;
+            dgvListado.Refresh();
         }
     }
 }
