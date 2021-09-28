@@ -1,5 +1,5 @@
 ﻿
-namespace Lab05
+namespace lab06
 {
     partial class ManPerson
     {
@@ -29,6 +29,15 @@ namespace Lab05
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnContrato = new System.Windows.Forms.Button();
+            this.btnApellidos = new System.Windows.Forms.Button();
+            this.btnNombre = new System.Windows.Forms.Button();
+            this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEnrollmentDate = new System.Windows.Forms.DateTimePicker();
             this.txtHireDate = new System.Windows.Forms.DateTimePicker();
@@ -40,18 +49,104 @@ namespace Lab05
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.dgvListado = new System.Windows.Forms.DataGridView();
-            this.btnNombre = new System.Windows.Forms.Button();
-            this.btnApellidos = new System.Windows.Forms.Button();
-            this.btnContrato = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.btnOrdenarApell = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnContrato
+            // 
+            this.btnContrato.Location = new System.Drawing.Point(420, 270);
+            this.btnContrato.Name = "btnContrato";
+            this.btnContrato.Size = new System.Drawing.Size(133, 35);
+            this.btnContrato.TabIndex = 19;
+            this.btnContrato.Text = "Buscar Contrato";
+            this.btnContrato.UseVisualStyleBackColor = true;
+            this.btnContrato.Click += new System.EventHandler(this.btnContrato_Click);
+            // 
+            // btnApellidos
+            // 
+            this.btnApellidos.Location = new System.Drawing.Point(281, 270);
+            this.btnApellidos.Name = "btnApellidos";
+            this.btnApellidos.Size = new System.Drawing.Size(133, 35);
+            this.btnApellidos.TabIndex = 18;
+            this.btnApellidos.Text = "Buscar Apellidos";
+            this.btnApellidos.UseVisualStyleBackColor = true;
+            this.btnApellidos.Click += new System.EventHandler(this.btnApellidos_Click);
+            // 
+            // btnNombre
+            // 
+            this.btnNombre.Location = new System.Drawing.Point(156, 270);
+            this.btnNombre.Name = "btnNombre";
+            this.btnNombre.Size = new System.Drawing.Size(119, 35);
+            this.btnNombre.TabIndex = 17;
+            this.btnNombre.Text = "Buscar Nombre";
+            this.btnNombre.UseVisualStyleBackColor = true;
+            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
+            // 
+            // dgvListado
+            // 
+            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListado.Location = new System.Drawing.Point(21, 336);
+            this.dgvListado.Name = "dgvListado";
+            this.dgvListado.ReadOnly = true;
+            this.dgvListado.RowHeadersVisible = false;
+            this.dgvListado.RowHeadersWidth = 51;
+            this.dgvListado.RowTemplate.Height = 24;
+            this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListado.Size = new System.Drawing.Size(540, 234);
+            this.dgvListado.TabIndex = 16;
+            this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(434, 211);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(105, 35);
+            this.btnEliminar.TabIndex = 15;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(434, 170);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(105, 35);
+            this.btnModificar.TabIndex = 14;
+            this.btnModificar.Text = "Modificar ";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnInsertar
+            // 
+            this.btnInsertar.Location = new System.Drawing.Point(434, 129);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(105, 35);
+            this.btnInsertar.TabIndex = 13;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(31, 270);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(119, 35);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar Codigo";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnListar
+            // 
+            this.btnListar.Location = new System.Drawing.Point(434, 89);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(105, 35);
+            this.btnListar.TabIndex = 11;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // groupBox1
             // 
@@ -65,10 +160,10 @@ namespace Lab05
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(17, 12);
+            this.groupBox1.Location = new System.Drawing.Point(31, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(374, 244);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Persona";
             // 
@@ -77,6 +172,7 @@ namespace Lab05
             this.txtEnrollmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtEnrollmentDate.Location = new System.Drawing.Point(211, 193);
             this.txtEnrollmentDate.Name = "txtEnrollmentDate";
+            this.txtEnrollmentDate.ShowCheckBox = true;
             this.txtEnrollmentDate.Size = new System.Drawing.Size(115, 22);
             this.txtEnrollmentDate.TabIndex = 9;
             // 
@@ -85,6 +181,7 @@ namespace Lab05
             this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtHireDate.Location = new System.Drawing.Point(35, 193);
             this.txtHireDate.Name = "txtHireDate";
+            this.txtHireDate.ShowCheckBox = true;
             this.txtHireDate.Size = new System.Drawing.Size(115, 22);
             this.txtHireDate.TabIndex = 8;
             // 
@@ -154,105 +251,22 @@ namespace Lab05
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
-            // btnListar
+            // btnOrdenarApell
             // 
-            this.btnListar.Location = new System.Drawing.Point(420, 56);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(105, 35);
-            this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(17, 272);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(119, 35);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar Codigo";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.Location = new System.Drawing.Point(420, 96);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(105, 35);
-            this.btnInsertar.TabIndex = 3;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(420, 137);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(105, 35);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar ";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(420, 178);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(105, 35);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // dgvListado
-            // 
-            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListado.Location = new System.Drawing.Point(7, 338);
-            this.dgvListado.Name = "dgvListado";
-            this.dgvListado.ReadOnly = true;
-            this.dgvListado.RowHeadersVisible = false;
-            this.dgvListado.RowHeadersWidth = 51;
-            this.dgvListado.RowTemplate.Height = 24;
-            this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListado.Size = new System.Drawing.Size(540, 234);
-            this.dgvListado.TabIndex = 6;
-            this.dgvListado.SelectionChanged += new System.EventHandler(this.dgvListado_SelectionChanged);
-            // 
-            // btnNombre
-            // 
-            this.btnNombre.Location = new System.Drawing.Point(142, 272);
-            this.btnNombre.Name = "btnNombre";
-            this.btnNombre.Size = new System.Drawing.Size(119, 35);
-            this.btnNombre.TabIndex = 7;
-            this.btnNombre.Text = "Buscar Nombre";
-            this.btnNombre.UseVisualStyleBackColor = true;
-            this.btnNombre.Click += new System.EventHandler(this.btnNombre_Click);
-            // 
-            // btnApellidos
-            // 
-            this.btnApellidos.Location = new System.Drawing.Point(267, 272);
-            this.btnApellidos.Name = "btnApellidos";
-            this.btnApellidos.Size = new System.Drawing.Size(133, 35);
-            this.btnApellidos.TabIndex = 8;
-            this.btnApellidos.Text = "Buscar Apellidos";
-            this.btnApellidos.UseVisualStyleBackColor = true;
-            this.btnApellidos.Click += new System.EventHandler(this.btnApellidos_Click);
-            // 
-            // btnContrato
-            // 
-            this.btnContrato.Location = new System.Drawing.Point(406, 272);
-            this.btnContrato.Name = "btnContrato";
-            this.btnContrato.Size = new System.Drawing.Size(133, 35);
-            this.btnContrato.TabIndex = 9;
-            this.btnContrato.Text = "Buscar Contrato";
-            this.btnContrato.UseVisualStyleBackColor = true;
-            this.btnContrato.Click += new System.EventHandler(this.btnContrato_Click);
+            this.btnOrdenarApell.Location = new System.Drawing.Point(434, 35);
+            this.btnOrdenarApell.Name = "btnOrdenarApell";
+            this.btnOrdenarApell.Size = new System.Drawing.Size(105, 48);
+            this.btnOrdenarApell.TabIndex = 20;
+            this.btnOrdenarApell.Text = "Ordenar Apellido";
+            this.btnOrdenarApell.UseVisualStyleBackColor = true;
+            this.btnOrdenarApell.Click += new System.EventHandler(this.btnOrdenarApell_Click);
             // 
             // ManPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 584);
+            this.ClientSize = new System.Drawing.Size(583, 588);
+            this.Controls.Add(this.btnOrdenarApell);
             this.Controls.Add(this.btnContrato);
             this.Controls.Add(this.btnApellidos);
             this.Controls.Add(this.btnNombre);
@@ -264,17 +278,26 @@ namespace Lab05
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.groupBox1);
             this.Name = "ManPerson";
-            this.Text = "Mantenimiento de Personas";
+            this.Text = "Mantenimiento Personas";
             this.Load += new System.EventHandler(this.ManPerson_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnContrato;
+        private System.Windows.Forms.Button btnApellidos;
+        private System.Windows.Forms.Button btnNombre;
+        private System.Windows.Forms.DataGridView dgvListado;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker txtEnrollmentDate;
         private System.Windows.Forms.DateTimePicker txtHireDate;
@@ -286,15 +309,7 @@ namespace Lab05
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dgvListado;
-        private System.Windows.Forms.Button btnNombre;
-        private System.Windows.Forms.Button btnApellidos;
-        private System.Windows.Forms.Button btnContrato;
+        private System.Windows.Forms.Button btnOrdenarApell;
     }
 }
 
