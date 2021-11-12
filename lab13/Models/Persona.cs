@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace lab12.Models
+namespace lab13.Models
 {
     public class Persona
     {
@@ -13,7 +13,5 @@ namespace lab12.Models
         public DateTime FechaNac { get; set; }
         public string Direccion { get; set; }
         public string Email { get; set; }
-
-
     }
 }

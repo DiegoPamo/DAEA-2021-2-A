@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using lab12.Models;
+using lab13.Models;
 
-namespace lab12.Controllers
+namespace lab13.Controllers
 {
     public class PersonaController : Controller
     {
@@ -14,7 +14,6 @@ namespace lab12.Controllers
         {
             return View();
         }
-
         public ActionResult Listar()
         {
             List<Persona> personas = new List<Persona>();
