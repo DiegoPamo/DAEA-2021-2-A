@@ -1,11 +1,32 @@
 ﻿@model List<lab13.Models.Persona>
 @{
     ViewBag.Title = "Listar";
+    var grid = new WebGrid(source: Model, columnNames: new[]{
+        "PersonaID","Nombre","Apellido","FechaNac","Direccion","Email"});
 }
 
+@using (Html.BeginForm("Listar", "Persona", FormMethod.Get))
+{
+    <p>Busqueda por nombre: </p>
+    @Html.Hidden("campo", "Nombre")
+    @Html.TextBox("valor")
+    <input type="submit" value="Search" />
+}
 <h2>Listado de Personas</h2>
-
-<table class="table table-striped">
+@grid.GetHtml(tableStyle: "table table-striped",
+                columns: grid.Columns(
+                    grid.Column(columnName: "PersonaID", header: "PersonaID"),
+                    grid.Column(columnName: "Nombre", header: "Nombre"),
+                    grid.Column(columnName: "Apellido", header: "Apellido"),
+                    grid.Column(columnName: "FechaNac", header: "FechaNac"),
+                    grid.Column(columnName: "Direccion", header: "Direccion"),
+                    grid.Column(columnName: "Email", header: "Email"),
+                    grid.Column(header: "Acciones", format: (item) =>
+                                Html.ActionLink("Ver", "Mostrar", "Persona",
+                                    new { id = item.PersonaID }, null))
+                    )
+                )
+<!--<table class="table table-striped">
     <tr>
         <th>PersonaID</th>
         <th>Nombre</th>
@@ -28,5 +49,4 @@
         </tr>
 
     }
-</table>
-
+</table>-->
